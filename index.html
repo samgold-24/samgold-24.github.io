@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Outfit:wght@500;700&display=swap" rel="stylesheet">
+<style>
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    background: #F6F7FB;
+    font-family: 'Lora', serif;
+    color: #2E2F3A;
+  }
+
+  /* ── Cover ── */
+  .cover {
+    background: linear-gradient(135deg, #C9B3E8 0%, #9B7FC7 50%, #7B5EA7 100%);
+    padding: 100px 30px 90px;
+    text-align: center;
+  }
+
+  .cover-name {
+    font-family: 'Outfit', sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  .cover-divider {
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: rgba(255,255,255,0.6);
+    margin: 20px auto 0;
+    border-radius: 2px;
+  }
+
+  /* ── About Section ── */
+  .about-section {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 60px 30px;
+    display: flex;
+    align-items: flex-start;
+    gap: 50px;
+  }
+
+  .about-image-col {
+    flex: 0 0 260px;
+  }
+
+  .about-image-placeholder {
+    width: 100%;
+    aspect-ratio: 3/4;
+    background: #E4D9F5;
+    border-radius: 12px;
+    border: 2px dashed #BFA2DB;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #BFA2DB;
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  .about-text-col {
+    flex: 1;
+  }
+
+  .about-heading {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #BFA2DB;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+
+  .about-heading-line {
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: #BFA2DB;
+    border-radius: 2px;
+    margin-bottom: 22px;
+    opacity: 0.6;
+  }
+
+  .about-text {
+    font-size: 0.97rem;
+    line-height: 1.8;
+    color: #44455A;
+  }
+
+  /* ── Responsive ── */
+  @media (max-width: 640px) {
+    .about-section {
+      flex-direction: column;
+      gap: 30px;
+      padding: 40px 20px;
+    }
+
+    .about-image-col {
+      flex: none;
+      width: 100%;
+      max-width: 280px;
+      margin: 0 auto;
+    }
+
+    .cover-name {
+      font-size: 2rem;
+    }
+  }
+</style>
+</head>
+<body>
+
+  <!-- Cover -->
+  <div class="cover">
+    <div class="cover-name">Samantha Goldstein</div>
+    <span class="cover-divider"></span>
+  </div>
+
+  <!-- About -->
+  <div class="about-section">
+
+    <!-- Image placeholder -->
+    <div class="about-image-col">
+      <div class="about-image-placeholder">Place Holder</div>
+    </div>
+
+    <!-- Text -->
+    <div class="about-text-col">
+      <div class="about-heading">About</div>
+      <span class="about-heading-line"></span>
+      <p class="about-text">
+        Hi, I'm Sam. I'm originally from Long Island, New York, and I graduated from Florida State University with a degree in Information Technology. I have hands-on experience in a helpdesk environment, where I troubleshoot issues and keep systems running smoothly for users. Outside of tech, I enjoy being outdoors, exploring new places, and always having a good playlist ready.
+      </p>
+    </div>
+
+  </div>
+
+</body>
+</html>
