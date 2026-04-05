@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Outfit:wght@500;700&display=swap" rel="stylesheet">
+<style>
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    background: #F6F7FB;
+    font-family: 'Lora', serif;
+    color: #2E2F3A;
+  }
+
+  .page-content {
+    padding: 40px 20px;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  /* ── Page Heading ── */
+  .page-heading {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .page-heading h1 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #BFA2DB;
+  }
+
+  .page-heading .heading-line {
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #BFA2DB;
+    margin: 14px auto 0;
+    border-radius: 2px;
+    opacity: 0.6;
+  }
+
+  /* ── Section Headers ── */
+  .section-header {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.78rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 36px 0 14px;
+    font-weight: 700;
+    color: #2E2F3A;
+  }
+
+  /* ── Skill Cards ── */
+  .skill-card {
+    background: #FFFFFF;
+    border-top: 3px solid #BFA2DB;
+    border-radius: 8px;
+    padding: 12px 14px;
+    margin: 0 auto 10px auto;
+    max-width: 400px;
+    cursor: pointer;
+    transition: box-shadow 0.25s ease;
+    user-select: none;
+  }
+
+  .skill-card:hover {
+    box-shadow: 0 4px 14px rgba(191, 162, 219, 0.3);
+  }
+
+  .skill-header {
+    position: relative;
+    text-align: center;
+  }
+
+  .skill-title {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    font-size: 0.92rem;
+  }
+
+  .skill-card .toggle-icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.2rem;
+    color: #BFA2DB;
+    font-weight: 700;
+    transition: transform 0.25s ease;
+  }
+
+  .skill-card.expanded .toggle-icon {
+    transform: rotate(45deg);
+  }
+
+  .skill-desc {
+    display: none;
+    font-size: 0.85rem;
+    line-height: 1.7;
+    margin-top: 8px;
+    color: #44455A;
+  }
+
+  .skill-card.expanded .skill-desc {
+    display: block;
+  }
+
+  /* ── Job Cards ── */
+  .job-card {
+    background: #FFFFFF;
+    border: 1.5px solid #BFA2DB;
+    border-radius: 10px;
+    padding: 16px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    transition: box-shadow 0.25s ease, background 0.25s ease;
+    user-select: none;
+  }
+
+  .job-card:hover {
+    box-shadow: 0 4px 18px rgba(191, 162, 219, 0.35);
+  }
+
+  .job-card.expanded {
+    background: rgba(191, 162, 219, 0.08);
+    box-shadow: 0 0 0 3px rgba(191, 162, 219, 0.4);
+  }
+
+  .job-header {
+    position: relative;
+    text-align: center;
+  }
+
+  .job-title {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    font-size: 0.95rem;
+  }
+
+  .job-company {
+    font-style: italic;
+    font-size: 0.82rem;
+    color: rgba(46,47,58,0.65);
+    margin-top: 3px;
+  }
+
+  .job-dates {
+    font-size: 0.8rem;
+    color: rgba(46,47,58,0.65);
+    margin-top: 2px;
+  }
+
+  .job-card .toggle-icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.2rem;
+    color: #BFA2DB;
+    font-weight: 700;
+    transition: transform 0.25s ease;
+  }
+
+  .job-card.expanded .toggle-icon {
+    transform: rotate(45deg);
+  }
+
+  .job-desc {
+    display: none;
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid rgba(191, 162, 219, 0.3);
+    font-size: 0.88rem;
+    line-height: 1.7;
+    color: #44455A;
+  }
+
+  .job-card.expanded .job-desc {
+    display: block;
+  }
+
+  .job-desc ul {
+    padding-left: 18px;
+  }
+
+  .job-desc li {
+    margin-bottom: 5px;
+  }
+
+  .nested-job {
+    margin-top: 12px;
+    padding-top: 10px;
+    border-top: 1px dashed rgba(191, 162, 219, 0.4);
+  }
+
+  .nested-job-title {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    font-size: 0.88rem;
+    margin-bottom: 2px;
+  }
+
+  .nested-job-dates {
+    font-size: 0.78rem;
+    color: rgba(46,47,58,0.65);
+    margin-bottom: 6px;
+  }
+
+  .resume-btn:hover {
+    background: #A687C9;
+  }
+</style>
+</head>
+<body>
+
+  <!-- Nav -->
+  <nav style="background:#2E2740;padding:16px 30px;display:flex;align-items:center;justify-content:space-between;">
+    <div style="font-family:'Outfit',sans-serif;font-weight:700;color:#BFA2DB;letter-spacing:0.1em;font-size:1.1rem;">SG</div>
+    <div style="display:flex;gap:28px;">
+      <a href="index.html" style="font-family:'Outfit',sans-serif;color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.85rem;letter-spacing:0.1em;text-transform:uppercase;">About</a>
+      <a href="projects.html" style="font-family:'Outfit',sans-serif;color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.85rem;letter-spacing:0.1em;text-transform:uppercase;">Projects</a>
+      <a href="experience.html" style="font-family:'Outfit',sans-serif;color:#BFA2DB;text-decoration:none;font-size:0.85rem;letter-spacing:0.1em;text-transform:uppercase;">Experience</a>
+    </div>
+  </nav>
+
+  <div class="page-content">
+
+    <!-- Page Heading -->
+    <div class="page-heading">
+      <h1>Experience</h1>
+      <span class="heading-line"></span>
+    </div>
+
+    <!-- Skills -->
+    <div class="section-header">Skills</div>
+
+    <div class="skill-card" onclick="this.classList.toggle('expanded')">
+      <div class="skill-header">
+        <div class="skill-title">Operating Systems</div>
+        <div class="toggle-icon">+</div>
+      </div>
+      <div class="skill-desc">
+        Windows (Intermediate — support &amp; deployment)<br>
+        macOS (Intermediate — troubleshooting)
+      </div>
+    </div>
+
+    <div class="skill-card" onclick="this.classList.toggle('expanded')">
+      <div class="skill-header">
+        <div class="skill-title">Programming</div>
+        <div class="toggle-icon">+</div>
+      </div>
+      <div class="skill-desc">
+        Python (Scripting &amp; automation)<br>
+        HTML / CSS (Portfolio development)
+      </div>
+    </div>
+
+    <div class="skill-card" onclick="this.classList.toggle('expanded')">
+      <div class="skill-header">
+        <div class="skill-title">Platforms &amp; Tools</div>
+        <div class="toggle-icon">+</div>
+      </div>
+      <div class="skill-desc">
+        Active Directory (User &amp; group management)<br>
+        Microsoft 365<br>
+        Jira &amp; Salesforce (Ticketing systems)<br>
+        Endpoint Imaging &amp; Deployment<br>
+        Azure Fundamentals (AZ-900 labs)
+      </div>
+    </div>
+
+    <!-- Work Experience -->
+    <div class="section-header">Work Experience</div>
+
+    <!-- Job 1 -->
+    <div class="job-card" onclick="this.classList.toggle('expanded')">
+      <div class="job-header">
+        <div class="job-title">IT Support Specialist</div>
+        <div class="job-company">FSU Division of University Advancement — Tallahassee, FL</div>
+        <div class="job-dates">Sept 2025 – Present</div>
+        <div class="toggle-icon">+</div>
+      </div>
+      <div class="job-desc">
+        <ul>
+          <li>Deliver end-user support across hardware, software, and access issues using Jira and Salesforce</li>
+          <li>Configure, image, and deploy Windows endpoints while maintaining security standards</li>
+          <li>Administer Active Directory accounts and access controls</li>
+          <li>Troubleshoot complex issues and manage ticket ownership</li>
+          <li>Create documentation to improve team efficiency</li>
+        </ul>
+        <div class="nested-job">
+          <div class="nested-job-title">IT Support Intern</div>
+          <div class="nested-job-dates">Jan 2025 – Sept 2025</div>
+          <ul>
+            <li>Resolved hardware, software, and account-related issues</li>
+            <li>Assisted with imaging and deployment</li>
+            <li>Supported Active Directory organization</li>
+            <li>Documented recurring issues</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Job 2 -->
+    <div class="job-card" onclick="this.classList.toggle('expanded')">
+      <div class="job-header">
+        <div class="job-title">Technology Specialist</div>
+        <div class="job-company">FSU College of Interior Design — Tallahassee, FL</div>
+        <div class="job-dates">June 2024 – May 2025</div>
+        <div class="toggle-icon">+</div>
+      </div>
+      <div class="job-desc">
+        <ul>
+          <li>Served as primary IT support contact for faculty, staff, and students</li>
+          <li>Built an automated inventory system to improve tracking</li>
+          <li>Provided training on printing and device usage</li>
+          <li>Maintained departmental technology equipment</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Job 3 -->
+    <div class="job-card" onclick="this.classList.toggle('expanded')">
+      <div class="job-header">
+        <div class="job-title">Information Technology Intern</div>
+        <div class="job-company">FSU Career Center — Tallahassee, FL</div>
+        <div class="job-dates">Aug 2023 – Dec 2023</div>
+        <div class="toggle-icon">+</div>
+      </div>
+      <div class="job-desc">
+        <ul>
+          <li>Provided Tier 1 support for hardware and software issues</li>
+          <li>Supported IT operations for events with 2,000+ attendees</li>
+          <li>Ensured reliable system performance during high-traffic events</li>
+          <li>Escalated and documented complex issues</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Certifications -->
+    <div class="section-header">Certifications</div>
+
+    <div class="job-card" onclick="this.classList.toggle('expanded')">
+      <div class="job-header">
+        <div class="job-title">Google IT Support Professional Certificate</div>
+        <div class="toggle-icon">+</div>
+      </div>
+      <div class="job-desc">
+        Developed foundational skills in troubleshooting, system administration, networking basics, and IT support best practices.
+      </div>
+    </div>
+
+    <div class="job-card" onclick="this.classList.toggle('expanded')">
+      <div class="job-header">
+        <div class="job-title">Microsoft Azure Fundamentals (AZ-900)</div>
+        <div class="toggle-icon">+</div>
+      </div>
+      <div class="job-desc">
+       Cloud concepts, Azure services, pricing models, and core cloud security principles.
+      </div>
+    </div>
+
+    <!-- Resume Button -->
+    <!-- TODO: Link later!!) -->
+    <div style="text-align:center;margin-top:40px;margin-bottom:20px;">
+      <a href="#" style="display:inline-block;font-family:'Outfit',sans-serif;font-weight:700;font-size:0.9rem;letter-spacing:0.08em;text-transform:uppercase;color:#ffffff;background:#BFA2DB;padding:12px 28px;border-radius:8px;text-decoration:none;transition:background 0.25s ease;">Download Resume</a>
+    </div>
+
+  </div>
+
+</body>
+</html>
