@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Experience | Samantha Goldstein</title>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;700;800&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/lucide@latest"></script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-experience">
+
+  <nav class="sticky-nav">
+    <div class="logo">SG</div>
+    <div style="display:flex;">
+      <a href="index.html">About</a>
+      <a href="experience.html" class="active">Experience</a>
+      <a href="projects.html">Projects</a>
+    </div>
+  </nav>
+
+  <main class="page-content">
+    <div class="page-heading">
+      <h1>experience</h1>
+    </div>
+
+    <section aria-label="Skills">
+      <div class="section-header">Technical Toolkit</div>
+
+      <div class="card-container" id="skill-os">
+        <button class="card-trigger" onclick="toggleCard('skill-os')" aria-expanded="false" aria-controls="panel-skill-os">
+          <span class="title-wrapper">
+            <i data-lucide="monitor" class="section-icon"></i>
+            <span class="card-title">Operating Systems</span>
+          </span>
+          <span class="toggle-icon">+</span>
+        </button>
+        <div class="desc-panel" id="panel-skill-os">
+          <div class="desc-content">
+            Windows (Intermediate — support & deployment)<br>
+            macOS (Intermediate — troubleshooting)
+          </div>
+        </div>
+      </div>
+
+      <div class="card-container" id="skill-prog">
+        <button class="card-trigger" onclick="toggleCard('skill-prog')" aria-expanded="false" aria-controls="panel-skill-prog">
+          <span class="title-wrapper">
+            <i data-lucide="code-2" class="section-icon"></i>
+            <span class="card-title">Programming</span>
+          </span>
+          <span class="toggle-icon">+</span>
+        </button>
+        <div class="desc-panel" id="panel-skill-prog">
+          <div class="desc-content">
+            Python (Scripting & automation)<br>
+            HTML / CSS (Portfolio development)
+          </div>
+        </div>
+      </div>
+
+      <div class="card-container" id="skill-tools">
+        <button class="card-trigger" onclick="toggleCard('skill-tools')" aria-expanded="false" aria-controls="panel-skill-tools">
+          <span class="title-wrapper">
+            <i data-lucide="layers" class="section-icon"></i>
+            <span class="card-title">Platforms & Tools</span>
+          </span>
+          <span class="toggle-icon">+</span>
+        </button>
+        <div class="desc-panel" id="panel-skill-tools">
+          <div class="desc-content">
+            Active Directory (User & group management)<br>
+            Microsoft 365, Jira, Salesforce<br>
+            Endpoint Imaging & Deployment<br>
+            Azure Fundamentals (AZ-900 labs)
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section aria-label="Work Experience">
+      <div class="section-header">Work Experience</div>
+
+      <div class="card-container" id="job-adv">
+        <button class="card-trigger" onclick="toggleCard('job-adv')" aria-expanded="false" aria-controls="panel-job-adv">
+          <span>
+            <span class="card-title">IT Support Specialist</span>
+            <span class="card-subtitle">FSU Division of University Advancement</span>
+            <span class="card-dates">Sept 2025 – Present</span>
+          </span>
+          <span class="toggle-icon">+</span>
+        </button>
+        <div class="desc-panel" id="panel-job-adv">
+          <div class="desc-content">
+            <ul class="job-list">
+              <li>Deliver end-user support across hardware, software, and access issues using Jira and Salesforce</li>
+              <li>Configure, image, and deploy Windows endpoints while maintaining security standards</li>
+              <li>Administer Active Directory accounts and access controls</li>
+              <li>Troubleshoot complex issues and manage ticket ownership</li>
+              <li>Create documentation to improve team efficiency</li>
+            </ul>
+            <div class="nested-job">
+              <span class="card-title" style="font-size:0.9rem;">IT Support Intern</span>
+              <span class="card-dates">Jan 2025 – Sept 2025</span>
+              <ul class="job-list" style="margin-top:10px;">
+                <li>Resolved hardware, software, and account-related issues</li>
+                <li>Assisted with imaging and deployment</li>
+                <li>Supported Active Directory organization</li>
+                <li>Documented recurring issues</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-container" id="job-cid">
+        <button class="card-trigger" onclick="toggleCard('job-cid')" aria-expanded="false" aria-controls="panel-job-cid">
+          <span>
+            <span class="card-title">Technology Specialist</span>
+            <span class="card-subtitle">FSU College of Interior Design</span>
+            <span class="card-dates">June 2024 – May 2025</span>
+          </span>
+          <span class="toggle-icon">+</span>
+        </button>
+        <div class="desc-panel" id="panel-job-cid">
+          <div class="desc-content">
+            <ul class="job-list">
+              <li>Primary IT support contact for faculty, staff, and students</li>
+              <li>Built an automated inventory tracking system</li>
+              <li>Maintained departmental technology equipment</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-container" id="job-career">
+        <button class="card-trigger" onclick="toggleCard('job-career')" aria-expanded="false" aria-controls="panel-job-career">
+          <span>
+            <span class="card-title">Information Technology Intern</span>
+            <span class="card-subtitle">FSU Career Center</span>
+            <span class="card-dates">Aug 2023 – Dec 2023</span>
+          </span>
+          <span class="toggle-icon">+</span>
+        </button>
+        <div class="desc-panel" id="panel-job-career">
+          <div class="desc-content">
+            <ul class="job-list">
+              <li>Provided Tier 1 technical support for hardware and software issues</li>
+              <li>Supported IT operations for large-scale career events with 2,000+ attendees</li>
+              <li>Ensured reliable connectivity during high-traffic sessions</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section aria-label="Certifications">
+      <div class="section-header">Certifications</div>
+      
+      <div class="card-container" id="cert-az">
+        <button class="card-trigger" onclick="toggleCard('cert-az')" aria-expanded="false" aria-controls="panel-cert-az">
+          <span class="card-title">Microsoft Azure Fundamentals (AZ-900)</span>
+          <span class="toggle-icon">+</span>
+        </button>
+        <div class="desc-panel" id="panel-cert-az">
+          <div class="desc-content">Focus on cloud concepts, Azure services, and core security principles.</div>
+        </div>
+      </div>
+
+      <div class="card-container" id="cert-ai">
+        <button class="card-trigger" onclick="toggleCard('cert-ai')" aria-expanded="false" aria-controls="panel-cert-ai">
+          <span class="card-title">Google AI Professional Certificate</span>
+          <span class="toggle-icon">+</span>
+        </button>
+        <div class="desc-panel" id="panel-cert-ai">
+          <div class="desc-content">Applied generative AI tools to automate workflows and build diagnostic agents.</div>
+        </div>
+      </div>
+
+      <div class="card-container" id="cert-it">
+        <button class="card-trigger" onclick="toggleCard('cert-it')" aria-expanded="false" aria-controls="panel-cert-it">
+          <span class="card-title">Google IT Support Professional Certificate</span>
+          <span class="toggle-icon">+</span>
+        </button>
+        <div class="desc-panel" id="panel-cert-it">
+          <div class="desc-content">Troubleshooting, system administration, networking, and IT support best practices.</div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer-actions">
+      <a href="Samantha_Goldstein_Resume.pdf" target="_blank" class="resume-ghost-btn">
+        <i data-lucide="file-text" style="width:16px;"></i> PDF Resume
+      </a>
+
+      <a href="projects.html" class="projects-btn">
+        View Projects <i data-lucide="arrow-right" style="width:18px;"></i>
+      </a>
+    </footer>
+  </main>
+
+  <script>
+    lucide.createIcons();
+    function toggleCard(id) {
+      const container = document.getElementById(id);
+      const button = container.querySelector('button');
+      const isExpanded = container.classList.contains('is-expanded');
+      container.classList.toggle('is-expanded');
+      button.setAttribute('aria-expanded', !isExpanded);
+    }
+  </script>
+
+</body>
+</html>

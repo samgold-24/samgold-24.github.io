@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About | Samantha Goldstein</title>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="system-bg"></div>
+
+  <nav>
+    <div class="logo">SG</div>
+    <div style="display:flex;">
+      <a href="index.html" class="active">About</a>
+      <a href="experience.html">Experience</a> 
+      <a href="projects.html">Projects</a>
+    </div>   
+  </nav>
+
+  <header class="hero-cover">
+    <h1 class="cover-name">Samantha Goldstein</h1>
+    <a href="#about" class="jump-arrow" id="scrollArrow">↓</a>
+  </header>
+
+  <main class="about-container" id="about">
+    <div class="image-col">
+      <img src="profile.png" alt="Samantha Goldstein" class="profile-box">
+    </div>
+
+    <article class="text-col">
+      <span class="label">About > </span>
+      <p class="about-text">
+        Hi, I'm Sam. I'm originally from Long Island, New York, and I graduated from Florida State University with a degree in Information Technology. I have hands-on experience in a helpdesk environment, where I troubleshoot issues and keep systems running smoothly for users. Outside of tech, I enjoy being outdoors, exploring new places, and always having a good playlist ready.
+      </p>
+
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/samanthakgoldstein" target="_blank" class="social-icon">
+          <svg viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+          Connect on LinkedIn
+        </a>
+      </div>
+    </article>
+  </main>
+
+  <footer style="text-align: center; padding-bottom: 120px;">
+    <span class="label" style="margin-bottom: 24px; display: block;">Continue Exploring</span>
+    <a href="experience.html" class="next-btn">View My Experience →</a>
+  </footer>
+
+  <script>
+    window.onscroll = function() {
+      var arrow = document.getElementById("scrollArrow");
+      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        arrow.style.opacity = "0";
+        arrow.style.visibility = "hidden";
+      } else {
+        arrow.style.opacity = "1";
+        arrow.style.visibility = "visible";
+      }
+    };
+  </script>
+
+</body>
+</html>
