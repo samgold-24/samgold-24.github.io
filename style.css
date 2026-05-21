@@ -24,9 +24,6 @@ body {
   overflow-x: hidden;
 }
 
-/* ==========================================================================
-   NAVIGATION
-   ========================================================================== */
 nav {
   background: rgba(18, 14, 26, 0.85);
   backdrop-filter: blur(15px);
@@ -41,7 +38,6 @@ nav {
   z-index: 100;
 }
 
-/* Sticky override for pages that need it */
 nav.sticky-nav {
   position: sticky;
 }
@@ -71,9 +67,6 @@ nav a.active {
   opacity: 1;
 }
 
-/* ==========================================================================
-   INDEX.HTML STYLES (About)
-   ========================================================================== */
 .system-bg {
   position: fixed;
   top: 0; left: 0;
@@ -203,9 +196,6 @@ nav a.active {
 
 .next-btn:hover { background: var(--white); transform: scale(1.05); box-shadow: 0 15px 40px rgba(191, 162, 219, 0.4); }
 
-/* ==========================================================================
-   PROJECTS.HTML STYLES
-   ========================================================================== */
 body.bg-projects {
   background-image: 
     linear-gradient(rgba(191, 162, 219, 0.03) 1px, transparent 1px),
@@ -237,22 +227,14 @@ body.bg-projects::before {
 }
 
 .bento-grid {
-  column-count: 2; /* Creates two columns that flow independently */
-  column-gap: 20px;
-}
-
-.bento-item {
-  margin-bottom: 20px; /* Space between items */
-  break-inside: avoid; /* Prevents items from splitting across columns */
   display: flex;
-  flex-direction: column;
-}
-
-.bento-item.featured {
-  column-span: all;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: stretch;
 }
 
 .bento-item {
+  flex: 1 1 calc(50% - 10px);
   background: var(--bg-card);
   border: 1px solid rgba(191, 162, 219, 0.15);
   border-radius: 24px;
@@ -264,7 +246,7 @@ body.bg-projects::before {
   overflow: hidden;
 }
 
-.bento-item.featured { grid-column: span 2; }
+.bento-item.featured { flex: 1 1 100%; }
 
 .bento-item:hover {
   border-color: var(--accent);
@@ -317,9 +299,6 @@ body.bg-projects::before {
   opacity: 0.5;
 }
 
-/* ==========================================================================
-   EXPERIENCE.HTML STYLES
-   ========================================================================== */
 body.bg-experience {
   background-image: 
     linear-gradient(rgba(191, 162, 219, 0.05) 1px, transparent 1px),
@@ -380,7 +359,6 @@ body.bg-experience {
 .job-list { padding-left: 0; list-style: none; }
 .job-list li { margin-bottom: 12px; position: relative; padding-left: 20px; }
 
-/* Clean, Minimalist Bullet Point Dot Update */
 .job-list li::before {
   content: "•";
   position: absolute;
@@ -454,9 +432,6 @@ body.bg-experience {
   transform: translateY(-2px);
 }
 
-/* ==========================================================================
-   MEDIA QUERIES
-   ========================================================================== */
 @media (max-width: 768px) {
   .about-container { flex-direction: column; text-align: center; gap: 40px; }
   .image-col { width: 240px; }
