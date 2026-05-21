@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Experience | Samantha Goldstein</title>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;700;800&display=swap" rel="stylesheet">
-<script src="https://unpkg.com/lucide@latest"></script>
 <link rel="stylesheet" href="style.css">
 </head>
 <body class="bg-experience">
@@ -30,7 +29,6 @@
       <div class="card-container" id="skill-os">
         <button class="card-trigger" onclick="toggleCard('skill-os')" aria-expanded="false" aria-controls="panel-skill-os">
           <span class="title-wrapper">
-            <i data-lucide="monitor" class="section-icon"></i>
             <span class="card-title">Operating Systems</span>
           </span>
           <span class="toggle-icon">+</span>
@@ -45,7 +43,6 @@
       <div class="card-container" id="skill-prog">
         <button class="card-trigger" onclick="toggleCard('skill-prog')" aria-expanded="false" aria-controls="panel-skill-prog">
           <span class="title-wrapper">
-            <i data-lucide="code-2" class="section-icon"></i>
             <span class="card-title">Programming</span>
           </span>
           <span class="toggle-icon">+</span>
@@ -62,7 +59,6 @@
       <div class="card-container" id="skill-tools">
         <button class="card-trigger" onclick="toggleCard('skill-tools')" aria-expanded="false" aria-controls="panel-skill-tools">
           <span class="title-wrapper">
-            <i data-lucide="layers" class="section-icon"></i>
             <span class="card-title">Platforms & Tools</span>
           </span>
           <span class="toggle-icon">+</span>
@@ -190,17 +186,16 @@
 
     <footer class="footer-actions">
       <a href="Samantha_Goldstein_Resume.pdf" target="_blank" class="resume-ghost-btn">
-        <i data-lucide="file-text" style="width:16px;"></i> PDF Resume
+        PDF Resume
       </a>
 
       <a href="projects.html" class="projects-btn">
-        View Projects <i data-lucide="arrow-right" style="width:18px;"></i>
+        View Projects
       </a>
     </footer>
   </main>
 
   <script>
-    lucide.createIcons();
     function toggleCard(id) {
       const container = document.getElementById(id);
       const button = container.querySelector('button');
