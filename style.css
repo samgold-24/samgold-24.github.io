@@ -435,7 +435,12 @@ body.bg-experience {
 @media (max-width: 768px) {
   .about-container { flex-direction: column; text-align: center; gap: 40px; }
   .image-col { width: 240px; }
-  .bento-grid { grid-template-columns: 1fr; }
-  .bento-item.featured { grid-column: span 1; }
+  
+  /* Update this block to align with your Flexbox grid */
+  .bento-grid {
+    display: flex;
+    flex-direction: column;
+  }
+  
   .projects-container h1 { font-size: 3rem; }
 }
