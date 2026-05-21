@@ -237,11 +237,19 @@ body.bg-projects::before {
 }
 
 .bento-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-  align-items: start;
-  grid-auto-flow: dense;
+  column-count: 2; /* Creates two columns that flow independently */
+  column-gap: 20px;
+}
+
+.bento-item {
+  margin-bottom: 20px; /* Space between items */
+  break-inside: avoid; /* Prevents items from splitting across columns */
+  display: flex;
+  flex-direction: column;
+}
+
+.bento-item.featured {
+  column-span: all;
 }
 
 .bento-item {
