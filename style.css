@@ -289,13 +289,6 @@ body.bg-projects::before {
   margin-bottom: 25px; 
 }
 
-.bento-item::after {
-  position: absolute; top: 25px; right: 30px;
-  font-size: 2rem; color: var(--accent); opacity: 0.1; font-weight: 800;
-}
-.bento-item.featured::after { content: "{ }"; } 
-.bento-item.cloud::after { content: "☁"; } 
-.bento-item.script::after { content: "⚡"; }
 
 .tools { display: flex; flex-wrap: wrap; gap: 10px; margin-top: auto; }
 
